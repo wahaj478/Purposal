@@ -1,0 +1,138 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(download6.jpg);
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .main {
+      background-color: pink;
+      width: 90%;
+      max-width: 500px;
+      border: 5px solid white;
+      animation: move 0.3s linear 1s backwards;
+      margin: 15vh auto;
+      padding: 20px;
+      text-align: center;
+      line-height: 1.6;
+      border-radius: 2rem;
+      position: relative; /* so .No button moves inside this box */
+    }
+
+    .main img {
+      height: auto;
+      width: 40%;
+      max-width: 150px;
+      background-color: white;
+      display: block;
+      margin: 0 auto 15px;
+      border-radius: 0.5rem;
+    }
+
+    .main h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .main p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .yes {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 1rem;
+      border: 2px solid black;
+      border-radius: 0.5rem;
+      color: black;
+      text-decoration: none;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    .yes:hover {
+      background: red;
+    }
+
+    .No {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 1rem;
+      border: 2px solid black;
+      border-radius: 0.5rem;
+      color: black;
+      text-decoration: none;
+      background: #fff;
+      position: absolute;
+      animation: Move 6s ease-in-out 2s infinite;
+    }
+    .no:hover {
+      background-color: red;
+    }
+
+    @keyframes move {
+      0% { transform: translateY(90%); }
+      30% { transform: translateY(70%); }
+      60% { transform: translateY(40%); }
+      80% { transform: translateY(20%); }
+      100% { transform: translateY(0%); }
+    }
+
+    @keyframes Move {
+      0%   { top: 11%; left: 120%; }
+      25%  { top: 0%; left: 14%; }
+      50%  { top: 10%; left: 75%; }
+      75%  { top: 55%; left: 23%; }
+      100% { top: 150%; left: 60%; }
+    }
+
+    /* -------- Responsive Queries -------- */
+
+    @media (max-width: 600px) {
+      .main {
+        width: 95%;
+        padding: 15px;
+      }
+      .main h1 {
+        font-size: 1.4rem;
+      }
+      .main p {
+        font-size: 1rem;
+      }
+      .main img {
+        width: 50%;
+      }
+      .yes, .No {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .main {
+        width: 80%;
+        max-width: 600px;
+      }
+      .main h1 {
+        font-size: 2rem;
+      }
+      .main p {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .main {
+        width: 30%;
+        margin-top: 12vh;
+      }
+    }
